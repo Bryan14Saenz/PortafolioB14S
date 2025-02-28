@@ -1,0 +1,88 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
+
+.inicio {
+  @include display(flex, column, space-between, center);
+  height: 100vh;
+  gap: 20px;
+  padding: 20px;
+
+  .enlaces {
+    ul {
+      @include display();
+      gap: 20px;
+
+      li {
+        a {
+          color: inherit;
+          font-size: 2rem;
+        }
+
+        .btnCambioColor {
+          font-size: 2rem;
+          border: none;
+          color: inherit;
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+  .contenido {
+    @include display();
+    gap: 20px;
+
+    .imagen {
+      overflow: hidden;
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+
+      img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
+    }
+
+    .texto {
+      text-align: center;
+
+      span {
+        font-size: 2.5rem;
+        font-weight: 700;
+      }
+    }
+  }
+
+  .helloWorld {
+    h2 {
+      overflow: hidden;
+      white-space: nowrap;
+      margin: 0 auto;
+      font-size: 3rem;
+      letter-spacing: 0.15em;
+      border-right: 2px solid $color2;
+      animation: typing 5s steps(20, end), blink-caret 0.75s step-end infinite;
+    }
+  }
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: inherit;
+  }
+}
