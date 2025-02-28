@@ -17,7 +17,7 @@ export default function NavBar() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => {
     const navbar = document.querySelector('.navbar') as HTMLElement;
-    
+
     setOpen(!open);
 
     navbar.style.width = open ? '80px' : '300px';
@@ -32,31 +32,31 @@ export default function NavBar() {
         <li>
           <Link to="/">
             <FaHome />
-            Inicio
+            <span>Inicio</span>
           </Link>
         </li>
         <li>
           <Link to="/habilidades">
             <IoCodeSlash />
-            Habilidades
+            <span>Habilidades</span>
           </Link>
         </li>
         <li>
           <Link to="/proyectos">
             <AiOutlineProduct />
-            Proyectos
+            <span>Proyectos</span>
           </Link>
         </li>
         <li>
           <Link to="/sobreMi">
             <AiOutlineIdcard />
-            Sobre Mi
+            <span>Sobre mí</span>
           </Link>
         </li>
         <li>
           <Link to="/contacto">
             <IoChatbubbleEllipsesOutline />
-            Contacto
+            <span>Contacto</span>
           </Link>
         </li>
       </ul>

@@ -48,3 +48,41 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .navbar {
+    top: 85%;
+    width: 90%;
+    height: 10%;
+
+    .cerrar {
+      display: none;
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0px;
+      width: 100%;
+      height: 100%;
+
+      li {
+        a {
+          font-size: 1.5rem;
+          padding: 5px 0px;
+          gap: 10px;
+
+          span {
+            display: none;
+          }
+
+          &:hover {
+            color: inherit;
+            background-color: transparent;
+          }
+        }
+      }
+    }
+  }
+}
