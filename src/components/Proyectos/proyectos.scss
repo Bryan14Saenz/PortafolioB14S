@@ -1,0 +1,165 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
+
+.proyectos {
+  @include display(flex, column, space-between, center);
+  margin: 10px;
+  gap: 5px;
+  padding: 10px;
+  z-index: 5;
+
+  h2 {
+    font-size: 3rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: inherit;
+    color: inherit;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 5px;
+    gap: 15px;
+    padding: 5px;
+
+    .proyecto {
+      width: 200px;
+      height: 200px;
+      padding: 5px;
+      border-radius: 10px;
+
+      &:hover {
+        cursor: pointer;
+        overflow: hidden;
+        transition: all 0.5s ease;
+        transform: scale(1.1);
+
+        &::after {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          background-color: rgba(0, 0, 0, 0.9);
+          z-index: 10;
+        }
+
+        .contenedor {
+          position: absolute;
+          text-align: center;
+          opacity: 1;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          z-index: 20;
+        }
+      }
+
+      .contenedor {
+        @include display(flex, column, center, center);
+        gap: 10px;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+
+        h3 {
+          font-size: 1.2rem;
+          color: $color2;
+        }
+
+        a {
+          img {
+            width: 80px;
+          }
+        }
+
+        .tecnologías {
+          @include display(flex, row, center, center);
+          flex-wrap: wrap;
+          width: 100%;
+
+          span {
+            font-size: 0.5rem;
+            margin: 1px;
+            padding: 5px 10px;
+            border-radius: 5px;
+            color: $color1;
+            background-color: $color2;
+          }
+        }
+      }
+    }
+
+    .proyecto:nth-child(1) {
+      background: url('../../assets/Img/nicaPage.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .proyecto:nth-child(2) {
+      background: url('../../assets/Img/delisHots.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .proyecto:nth-child(3) {
+      background-image: url('../../assets/Img/clientList.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .proyecto:nth-child(4) {
+      background: url('../../assets/Img/laberinto.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+
+    .proyecto:nth-child(5) {
+      background: url('../../assets/Img/apiOnePiece.png');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .proyectos {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+
+      .proyecto {
+        width: 140px;
+        height: 140px;
+
+        &:hover {
+          transform: scale(1);
+        }
+
+        .contenedor {
+          opacity: 1;
+
+          h3 {
+            display: none;
+          }
+
+          .tecnologías {
+            span {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+  }
+}

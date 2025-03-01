@@ -1,53 +1,37 @@
-import { useState } from 'react';
 import {
   FaFacebook,
   FaFilePdf,
   FaGithub,
   FaLinkedin,
-  FaMoon,
-  FaSun,
   FaTwitter,
 } from 'react-icons/fa';
-import bryanSanchez from '../../assets/bryanSanchez.png';
-import curriculum from '../../assets/curriculum.pdf';
+import { useInicio } from '../../Hook/useInicio';
 import './inicio.scss';
 
 export default function Inicio() {
-  const [modoOscuro, setModoOscuro] = useState(false);
-
-  const cambiarColor = () => {
-    setModoOscuro(!modoOscuro);
-
-    if (modoOscuro) {
-      document.body.style.backgroundColor = '#000';
-      document.body.style.color = '#fff';
-    } else {
-      document.body.style.backgroundColor = '#fff';
-      document.body.style.color = '#000';
-    }
-  };
+  const { btnColor, bryanSanchez, curriculum, redes } = useInicio();
 
   return (
-    <div className="inicio">
+    <section className="inicio">
       <div className="enlaces">
         <ul>
           <li>
-            <a href="https://www.facebook.com/14BryanSaenz" target="_blank">
+            <a href={redes.facebook} target="_blank">
               <FaFacebook />
             </a>
           </li>
           <li>
-            <a href="https://x.com/14BryanSaenz" target="_blank">
+            <a href={redes.twitter} target="_blank">
               <FaTwitter />
             </a>
           </li>
           <li>
-            <a href="https://www.linkedin.com/in/14bryansaenz/" target="_blank">
+            <a href={redes.LinkedIn} target="_blank">
               <FaLinkedin />
             </a>
           </li>
           <li>
-            <a href="https://github.com/Bryan14Saenz" target="_blank">
+            <a href={redes.github} target="_blank">
               <FaGithub />
             </a>
           </li>
@@ -57,13 +41,7 @@ export default function Inicio() {
             </a>
           </li>
           <li>
-            <button type="button" className="btnCambioColor">
-              {modoOscuro ? (
-                <FaMoon onClick={cambiarColor} />
-              ) : (
-                <FaSun onClick={cambiarColor} />
-              )}
-            </button>
+            <button className="btnCambioColor">{btnColor}</button>
           </li>
         </ul>
       </div>
@@ -72,15 +50,15 @@ export default function Inicio() {
           <img src={bryanSanchez} alt="Bryan Sanchez" />
         </div>
         <div className="texto">
-          <h2>
+          <h1>
             Bienvenido, soy <br /> <span> Bryan Sanchez </span> <br /> y soy
             desarrollador web
-          </h2>
+          </h1>
         </div>
       </div>
       <div className="helloWorld">
-        <h2>Hello World!</h2>
+        <h2>Hello World!...</h2>
       </div>
-    </div>
+    </section>
   );
 }

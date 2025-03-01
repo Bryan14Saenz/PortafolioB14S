@@ -1,10 +1,13 @@
-import NavBar from "../components/NavBar/NavBar";
+import Cuadros from '../components/Cuadros/Cuadros';
+import NavBar from '../components/NavBar/NavBar';
+import Proyectos from '../components/Proyectos/Proyectos';
 
 export default function ProyectosPage() {
   return (
     <div>
+      <Cuadros />
       <NavBar />
-      <h1>ProyectosPage</h1>
+      <Proyectos />
     </div>
-  )
+  );
 }

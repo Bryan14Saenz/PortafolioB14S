@@ -1,0 +1,120 @@
+@import '../../style/mixins.scss';
+@import '../../style/variables.scss';
+
+.habilidades {
+  @include display(flex, column, space-between, center);
+  margin: 20px;
+  gap: 10px;
+  padding: 20px;
+  z-index: 5;
+
+  h2 {
+    text-align: center;
+    font-size: 3rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid;
+    border-color: inherit;
+    color: inherit;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 10px;
+    gap: 100px;
+    padding: 10px;
+    z-index: 5;
+
+    .front-end,
+    .herramientas {
+      h3 {
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid;
+        border-color: inherit;
+        color: inherit;
+      }
+
+      ul {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 10px;
+        padding: 10px;
+        margin: 10px;
+
+        li {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+          font-size: 2rem;
+          border-radius: 50%;
+          border: 1px solid;
+          border-color: inherit;
+        }
+      }
+    }
+
+    .back-end {
+      h3 {
+        text-align: center;
+        font-size: 2rem;
+        padding-bottom: 10px;
+        border-bottom: 1px solid;
+        border-color: inherit;
+        color: inherit;
+      }
+
+      ul {
+        text-align: center;
+        padding: 5px 10px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .habilidades {
+    h2 {
+      font-size: 2rem;
+    }
+
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 10px;
+
+      .front-end,
+      .herramientas {
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        ul {
+          grid-template-columns: repeat(2, 1fr);
+
+          li {
+            font-size: 1.5rem;
+          }
+        }
+      }
+
+      .back-end {
+        grid-area: span 3 / span 2;
+
+        h3 {
+          font-size: 1.2rem;
+        }
+
+        ul {
+          text-align: center;
+          padding: 0px 5px;
+
+          p {
+            font-size: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}

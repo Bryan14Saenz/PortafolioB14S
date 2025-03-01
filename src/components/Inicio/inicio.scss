@@ -9,21 +9,26 @@
   height: 100dvh;
   gap: 20px;
   padding: 20px;
-  z-index: 10;
+  z-index: 5;
 
   .enlaces {
     ul {
       @include display();
+      padding: 10px 20px;
       gap: 20px;
 
       li {
         a {
           color: inherit;
-          font-size: 2rem;
+          font-size: 1.8rem;
+
+          &:hover {
+            color: #aaa;
+          }
         }
 
         .btnCambioColor {
-          font-size: 2rem;
+          font-size: 1.8rem;
           border: none;
           color: inherit;
           background-color: transparent;
@@ -34,7 +39,7 @@
 
   .contenido {
     @include display();
-    gap: 20px;
+    gap: 30px;
 
     .imagen {
       overflow: hidden;
@@ -53,7 +58,7 @@
       text-align: center;
 
       span {
-        font-size: 2.5rem;
+        font-size: 2.7rem;
         font-weight: 700;
       }
     }
@@ -64,10 +69,10 @@
       overflow: hidden;
       white-space: nowrap;
       margin: 0 auto;
-      font-size: 3rem;
+      font-size: 2.5rem;
       letter-spacing: 0.15em;
       border-right: 2px solid $color2;
-      animation: typing 5s steps(20, end), blink-caret 0.75s step-end infinite;
+      animation: typing 4s steps(20, end), blink-caret 0.75s step-end infinite;
     }
   }
 }
@@ -97,6 +102,8 @@
 
     .enlaces {
       ul {
+        gap: 10px;
+
         li {
           a {
             font-size: 1.8rem;
@@ -119,10 +126,10 @@
 
       .texto {
         h2 {
-          font-size: 2.5rem;
+          font-size: 1.5rem;
 
           span {
-            font-size: 3rem;
+            font-size: 1.8rem;
           }
         }
       }

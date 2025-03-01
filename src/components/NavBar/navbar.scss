@@ -1,5 +1,4 @@
 @import '../../style/mixins.scss';
-@import '../../style/variables.scss';
 
 .navbar {
   overflow: hidden;
@@ -16,7 +15,7 @@
 
   .cerrar {
     width: 100%;
-    padding: 0px 10px;
+    padding: 20px;
     font-size: 2rem;
     border: none;
     color: inherit;
@@ -24,7 +23,11 @@
   }
 
   ul {
-    padding: 5px 15px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding: 15px;
+    gap: 20px;
 
     li {
       list-style: none;
@@ -33,16 +36,20 @@
         display: flex;
         align-items: center;
         text-decoration: none;
-        gap: 25px;
+        gap: 20px;
         padding: 5px 10px;
         font-size: 2rem;
         color: inherit;
 
+        span {
+          width: 200px;
+          font-size: 1.5rem;
+        }
+
         &:hover {
           font-size: 2.2rem;
           border-radius: 10px;
-          color: $color1;
-          background-color: $color2;
+          color: #aaa;
         }
       }
     }
@@ -63,7 +70,6 @@
       display: flex;
       justify-content: space-around;
       align-items: center;
-      padding: 0px;
       width: 100%;
       height: 100%;
 

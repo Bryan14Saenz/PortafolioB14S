@@ -1,0 +1,43 @@
+import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+import './contacto.scss';
+
+export default function Contacto() {
+  const email = 'mailto:14bryansaenz@gmail.com';
+
+  return (
+    <footer className="footer">
+      <div className="contenedor">
+        <h2>Hablemos</h2>
+        <p>Contactame para que creemos proyecto juntos</p>
+        <a href={email}>Envíame un correo</a>
+      </div>
+      <div className="contacto">
+        <p>B14S</p>
+        <p>Aprendo y creo todos los días.</p>
+        <ul>
+          <li>
+            <a href="https://www.facebook.com/14BryanSaenz" target="_blank">
+              <FaFacebook />
+            </a>
+          </li>
+          <li>
+            <a href="https://twitter.com/14BryanSaenz" target="_blank">
+              <FaTwitter />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.linkedin.com/in/14bryansaenz/" target="_blank">
+              <FaLinkedin />
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/Bryan14Saenz" target="_blank">
+              <FaGithub />
+            </a>
+          </li>
+        </ul>
+        <p>Desarrollado por Bryan Saenz en React</p>
+      </div>
+    </footer>
+  );
+}
