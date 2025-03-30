@@ -1,14 +1,22 @@
+// Importaciones de Iconos de React
 import { FaFacebook, FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa';
+// Importaciones de los Redes Sociales
+import redes from '../../services/redes';
+// Importaciones de estilos
 import './contacto.scss';
 
-export default function Contacto() {
-  const email = 'mailto:14bryansaenz@gmail.com';
+// Componente de Contacto
+export const Contacto = () => {
+  // Constantes que almacenan los enlaces de las redes
+  const { email } = redes;
 
   return (
     <footer className="footer">
       <div className="contenedor">
         <h2>Hablemos</h2>
-        <p>Contactame para que creemos proyecto juntos</p>
+        <p>
+          "Programa no para resolver problemas, sino para crear soluciones".
+        </p>
         <a href={email}>Envíame un correo</a>
       </div>
       <div className="contacto">
@@ -36,8 +44,10 @@ export default function Contacto() {
             </a>
           </li>
         </ul>
-        <p>Desarrollado por Bryan Saenz en React</p>
+        <p>
+          Desarrollado por <span>Bryan14Saenz</span> en React
+        </p>
       </div>
     </footer>
   );
-}
+};

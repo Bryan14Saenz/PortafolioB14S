@@ -1,13 +1,13 @@
-import Cuadros from '../components/Cuadros/Cuadros';
-import NavBar from '../components/NavBar/NavBar';
-import Proyectos from '../components/Proyectos/Proyectos';
+// Importación de componentes
+import { Cuadros, NavBar, Proyectos } from '../components/';
 
+// Exportación y Renderización de la página
 export default function ProyectosPage() {
   return (
-    <div>
+    <>
       <Cuadros />
       <NavBar />
       <Proyectos />
-    </div>
+    </>
   );
 }

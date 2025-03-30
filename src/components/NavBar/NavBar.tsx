@@ -1,11 +1,17 @@
+// Importaciones de Iconos
 import { AiOutlineIdcard, AiOutlineProduct } from 'react-icons/ai';
 import { FaHome } from 'react-icons/fa';
 import { IoChatbubbleEllipsesOutline, IoCodeSlash } from 'react-icons/io5';
+// Importaciones de dependencias de react-router
 import { Link } from 'react-router-dom';
-import { useNavBar } from '../../Hook/useNavBar';
+// Importaciones de Hook
+import { useNavBar } from '../../Hook';
+// Importaciones de estilos
 import './navbar.scss';
 
-export default function NavBar() {
+// Componente de NavBar
+export const NavBar = () => {
+  // Llamada al Hook
   const { btnNavBar, handleOpen } = useNavBar();
 
   return (
@@ -47,4 +53,4 @@ export default function NavBar() {
       </ul>
     </nav>
   );
-}
+};

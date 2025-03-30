@@ -1,53 +1,50 @@
-@import '../../style/variables.scss';
-@import '../../style/mixins.scss';
-
 .cuadros {
   position: fixed;
   z-index: 1;
   border-radius: 10px;
-  filter: opacity(0.1);
   border: 1px solid;
   border-color: inherit;
   background-color: transparent;
+  filter: opacity(0.1);
 }
 
 @for $i from 1 through 5 {
   .cuadros:nth-child(#{$i}) {
+    animation: movimiento 100s infinite linear;
     top: random(100) * 1%;
     left: random(100) * 1%;
     width: 50px;
     height: 50px;
-    animation: movimiento 100s infinite linear;
   }
 }
 @for $i from 5 through 10 {
   .cuadros:nth-child(#{$i}) {
     position: fixed;
+    animation: movimiento2 100s infinite linear;
     right: random(100) * 1%;
     bottom: random(100) * 1%;
     width: 60px;
     height: 60px;
-    animation: movimiento2 100s infinite linear;
   }
 }
 @for $i from 10 through 15 {
   .cuadros:nth-child(#{$i}) {
     position: fixed;
+    animation: movimiento 100s infinite linear;
     top: random(100) * 1%;
     right: random(100) * 1%;
     width: 70px;
     height: 70px;
-    animation: movimiento 100s infinite linear;
   }
 }
 @for $i from 15 through 20 {
   .cuadros:nth-child(#{$i}) {
     position: fixed;
+    animation: movimiento2 100s infinite linear;
     left: random(100) * 1%;
     bottom: random(100) * 1%;
     width: 80px;
     height: 80px;
-    animation: movimiento2 100s infinite linear;
   }
 }
 

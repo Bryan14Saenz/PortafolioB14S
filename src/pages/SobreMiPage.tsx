@@ -1,13 +1,13 @@
-import Cuadros from '../components/Cuadros/Cuadros';
-import NavBar from '../components/NavBar/NavBar';
-import SobreMi from '../components/SobreMi/SobreMi';
+// Importación de componentes
+import { Cuadros, NavBar, SobreMi } from '../components/';
 
+// Exportación y Renderización de la página
 export default function SobreMiPage() {
   return (
-    <div>
+    <>
       <Cuadros />
       <NavBar />
       <SobreMi />
-    </div>
+    </>
   );
 }

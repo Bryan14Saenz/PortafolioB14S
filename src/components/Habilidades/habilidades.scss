@@ -1,29 +1,25 @@
+// Importación de archivos mixins
 @import '../../style/mixins.scss';
-@import '../../style/variables.scss';
 
+// Estilos de habilidades
 .habilidades {
-  @include display(flex, column, space-between, center);
-  margin: 20px;
+  @include display(flex, column, center, center);
+  height: 100dvh;
+  margin: 0 auto;
   gap: 10px;
-  padding: 20px;
-  z-index: 5;
 
   h2 {
-    text-align: center;
-    font-size: 3rem;
-    padding-bottom: 10px;
-    border-bottom: 1px solid;
-    border-color: inherit;
+    font-size: 2.5rem;
+    border-bottom: 1px solid #707070;
     color: inherit;
   }
 
   .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
     margin: 10px;
-    gap: 100px;
     padding: 10px;
-    z-index: 5;
 
     .front-end,
     .herramientas {
@@ -31,8 +27,7 @@
         text-align: center;
         font-size: 2rem;
         padding-bottom: 10px;
-        border-bottom: 1px solid;
-        border-color: inherit;
+        border-bottom: 1px solid #707070;
         color: inherit;
       }
 
@@ -40,14 +35,13 @@
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         gap: 10px;
-        padding: 10px;
         margin: 10px;
 
         li {
           display: flex;
           justify-content: center;
           align-items: center;
-          padding: 10px;
+          padding: 8px;
           font-size: 2rem;
           border-radius: 50%;
           border: 1px solid;
@@ -61,8 +55,7 @@
         text-align: center;
         font-size: 2rem;
         padding-bottom: 10px;
-        border-bottom: 1px solid;
-        border-color: inherit;
+        border-bottom: 1px solid #707070;
         color: inherit;
       }
 
@@ -74,14 +67,16 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+// Media Queries
+@media screen and (max-width: 450px) {
   .habilidades {
     h2 {
-      font-size: 2rem;
+      font-size: 1.8rem;
     }
 
     .grid {
       grid-template-columns: repeat(2, 1fr);
+      padding: 0px;
       gap: 10px;
 
       .front-end,
@@ -94,7 +89,9 @@
           grid-template-columns: repeat(2, 1fr);
 
           li {
-            font-size: 1.5rem;
+            font-size: 1.2rem;
+            padding: 5px;
+            border: none;
           }
         }
       }
@@ -111,7 +108,7 @@
           padding: 0px 5px;
 
           p {
-            font-size: 1.5rem;
+            font-size: 1rem;
           }
         }
       }

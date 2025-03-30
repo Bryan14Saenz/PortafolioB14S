@@ -1,3 +1,4 @@
+// Importaciones de Iconos
 import {
   FaFacebook,
   FaFilePdf,
@@ -5,10 +6,14 @@ import {
   FaLinkedin,
   FaTwitter,
 } from 'react-icons/fa';
-import { useInicio } from '../../Hook/useInicio';
+// Importaciones de Hook
+import { useInicio } from '../../Hook';
+// Importaciones de estilos
 import './inicio.scss';
 
-export default function Inicio() {
+// Componente de Inicio
+export const Inicio = () => {
+  // Llamada al Hook
   const { btnColor, bryanSanchez, curriculum, redes } = useInicio();
 
   return (
@@ -51,8 +56,9 @@ export default function Inicio() {
         </div>
         <div className="texto">
           <h1>
-            Bienvenido, soy <br /> <span> Bryan Sanchez </span> <br /> y soy
-            desarrollador web
+            Bienvenido, soy <br />
+            <span> Bryan Sanchez </span>
+            <br /> Web Developer - Front-End
           </h1>
         </div>
       </div>
@@ -61,4 +67,4 @@ export default function Inicio() {
       </div>
     </section>
   );
-}
+};

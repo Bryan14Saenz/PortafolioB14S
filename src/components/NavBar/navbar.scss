@@ -1,23 +1,24 @@
+// Importación de archivos mixins
 @import '../../style/mixins.scss';
 
+// Estilos del navbar
 .navbar {
   overflow: hidden;
   position: fixed;
   transition: all 0.5s ease;
   top: 15%;
   left: 5%;
-  width: 80px;
-  height: 70%;
+  width: 70px;
+  padding: 10px 0px;
   z-index: 10;
-  border: 1px solid;
-  border-color: inherit;
   border-radius: 10px;
+  border: 1px solid #707070;
 
   .cerrar {
-    width: 100%;
-    padding: 20px;
-    font-size: 2rem;
     border: none;
+    width: 100%;
+    padding: 10px 0px;
+    font-size: 2rem;
     color: inherit;
     background-color: transparent;
   }
@@ -25,8 +26,8 @@
   ul {
     display: flex;
     flex-direction: column;
+    padding: 10px;
     flex-wrap: wrap;
-    padding: 15px;
     gap: 20px;
 
     li {
@@ -36,6 +37,7 @@
         display: flex;
         align-items: center;
         text-decoration: none;
+        transition: all 0.5s ease;
         gap: 20px;
         padding: 5px 10px;
         font-size: 2rem;
@@ -47,16 +49,16 @@
         }
 
         &:hover {
-          font-size: 2.2rem;
-          border-radius: 10px;
-          color: #aaa;
+          font-size: 2.5rem;
+          color: #707070;
         }
       }
     }
   }
 }
 
-@media screen and (max-width: 600px) {
+// Media Queries
+@media screen and (max-width: 450px) {
   .navbar {
     top: 85%;
     width: 90%;
@@ -67,17 +69,14 @@
     }
 
     ul {
-      display: flex;
-      justify-content: space-around;
+      justify-content: center;
       align-items: center;
-      width: 100%;
+      gap: 0px;
       height: 100%;
 
       li {
         a {
-          font-size: 1.5rem;
-          padding: 5px 0px;
-          gap: 10px;
+          font-size: 1.8rem;
 
           span {
             display: none;
@@ -90,5 +89,11 @@
         }
       }
     }
+  }
+}
+
+@media screen and (min-width: 1024) {
+  .navbar {
+    height: 400px;
   }
 }

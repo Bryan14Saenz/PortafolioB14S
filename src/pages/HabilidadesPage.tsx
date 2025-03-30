@@ -1,13 +1,13 @@
-import Cuadros from "../components/Cuadros/Cuadros";
-import Habilidades from "../components/Habilidades/Habilidades";
-import NavBar from "../components/NavBar/NavBar";
+// Importación de componentes
+import { Cuadros, Habilidades, NavBar } from '../components/';
 
+// Exportación y Renderización de la página
 export default function HabilidadesPage() {
   return (
-    <div>
+    <>
       <NavBar />
       <Habilidades />
       <Cuadros />
-    </div>
+    </>
   );
 }

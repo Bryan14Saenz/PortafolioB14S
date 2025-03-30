@@ -1,13 +1,13 @@
-import Contacto from '../components/Contacto/Contacto';
-import Cuadros from '../components/Cuadros/Cuadros';
-import NavBar from '../components/NavBar/NavBar';
+// Importación de componentes
+import { Cuadros, Contacto, NavBar } from '../components/';
 
+// Exportación y Renderización de la página
 export default function ContactoPage() {
   return (
-    <div>
+    <>
       <Cuadros />
       <NavBar />
       <Contacto />
-    </div>
+    </>
   );
 }

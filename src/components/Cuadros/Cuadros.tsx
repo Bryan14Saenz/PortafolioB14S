@@ -1,6 +1,8 @@
+// Importación de estilos
 import './cuadros.scss';
 
-export default function Cuadros() {
+// Componente de Cuadros
+export const Cuadros = () => {
   return (
     <>
       <div className="cuadros"></div>
@@ -25,4 +27,4 @@ export default function Cuadros() {
       <div className="cuadros"></div>
     </>
   );
-}
+};

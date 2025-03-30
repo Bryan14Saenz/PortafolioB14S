@@ -1,13 +1,13 @@
-import Cuadros from '../components/Cuadros/Cuadros';
-import Inicio from '../components/Inicio/Inicio';
-import NavBar from '../components/NavBar/NavBar';
+// Importación de componentes
+import { Cuadros, Inicio, NavBar } from '../components/';
 
+// Exportación y Renderización de la página
 export default function InicioPage() {
   return (
-    <div>
+    <>
       <NavBar />
       <Inicio />
       <Cuadros />
-    </div>
+    </>
   );
 }

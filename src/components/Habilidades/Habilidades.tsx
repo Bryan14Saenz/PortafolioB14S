@@ -1,3 +1,4 @@
+// Importaciones de Iconos
 import {
   FaBootstrap,
   FaCss3Alt,
@@ -8,11 +9,13 @@ import {
   FaReact,
   FaSass,
 } from 'react-icons/fa';
-import { SiTypescript } from 'react-icons/si';
+import { SiCanva, SiJquery, SiNetlify, SiTypescript } from 'react-icons/si';
 import { TbBrandVscode } from 'react-icons/tb';
+// Importaciones de estilos
 import './habilidades.scss';
 
-export default function Habilidades() {
+// Componente de Habilidades
+export const Habilidades = () => {
   return (
     <section className="habilidades">
       <h2>Tecnologías</h2>
@@ -28,6 +31,12 @@ export default function Habilidades() {
             </li>
             <li>
               <FaGithub className="icon" title="GitHub" />
+            </li>
+            <li>
+              <SiNetlify className="icon" title="Netlify" />
+            </li>
+            <li>
+              <SiCanva className="icon" title="Canva" />
             </li>
           </ul>
         </div>
@@ -50,6 +59,9 @@ export default function Habilidades() {
               <FaJs className="icon" title="JavaScript" />
             </li>
             <li>
+              <SiJquery className="icon" title="JQuery" />
+            </li>
+            <li>
               <SiTypescript className="icon" title="TypeScript" />
             </li>
             <li>
@@ -66,4 +78,4 @@ export default function Habilidades() {
       </div>
     </section>
   );
-}
+};
