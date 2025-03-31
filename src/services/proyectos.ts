@@ -4,7 +4,7 @@ import delisHots from '../assets/Img/delisHots.png';
 import laberinto from '../assets/Img/laberinto.png';
 import clientList from '../assets/Img/clientList.png';
 import apiOnePiece from '../assets/Img/apiOnePiece.png';
-import loginToDo from '../assets/Img/loginToDo.png';
+import todoApp from '../assets/Img/todoApp.png';
 import abletonFM from '../assets/Img/abletonFM.png';
 import podioFM from '../assets/Img/podioFM.png';
 import chatBot from '../assets/Img/chatBot.png';
@@ -131,7 +131,7 @@ const proyectos: Proyecto[] = [
   },
   {
     id: 9,
-    img: loginToDo,
+    img: todoApp,
     nombre: 'Login To-Do',
     tecnologías: [
       'HTML',

@@ -51,15 +51,15 @@ export const Proyectos = () => {
               </div>
               <h2 className="titulo">{proyecto.nombre}</h2>
               <div className="tecnologías">
-                {proyecto.tecnologías.map((tecnologia) => (
-                  <span key={proyecto.id}>{tecnologia}</span>
+                {proyecto.tecnologías.map((tecnologia, index) => (
+                  <span key={`${proyecto.id}-${index}`}>{tecnologia}</span>
                 ))}
               </div>
               <div className="enlaces">
                 <button>
-                  {proyecto.enlaces.map((enlace) => (
+                  {proyecto.enlaces.map((enlace, index) => (
                     <a
-                      key={proyecto.id}
+                      key={`${proyecto.id}-github-${index}`}
                       href={enlace.github || enlace.netlify}
                       target="_blank"
                       rel="noopener noreferrer"
@@ -69,9 +69,9 @@ export const Proyectos = () => {
                   ))}
                 </button>
                 <button>
-                  {proyecto.enlaces.map((enlace) => (
+                  {proyecto.enlaces.map((enlace, index) => (
                     <a
-                      key={proyecto.id}
+                      key={`${proyecto.id}-netlify-${index}`}
                       href={enlace.netlify}
                       target="_blank"
                       rel="noopener noreferrer"
